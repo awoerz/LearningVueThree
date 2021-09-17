@@ -15,7 +15,12 @@
                 v-bind:item="item"
                 v-bind:key="item.id"
             ></list-item>
-            <button v-on:click="addToList">Click Me</button>
+            <br>
+            <input-field
+                type="text"
+                placeholder-value="Add Item To List"
+            ></input-field>
+            <br>
         </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
