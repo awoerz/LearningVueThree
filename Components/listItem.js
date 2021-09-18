@@ -3,5 +3,3 @@ const ListItem = {
     template: `<li>{{item.text}}</li>`,
     props: ['item']
 }
-
-export default ListItem

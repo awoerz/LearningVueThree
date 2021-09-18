@@ -1,7 +1,3 @@
-import ListItem from './Components/ListItem.js'
-import InputField from './Components/InputField.js'
-import SimpleForm from './Components/SimpleForm.js'
-
 const list = Vue.createApp({
 
     components: ['simple-form'],
