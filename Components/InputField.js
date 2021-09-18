@@ -1,23 +1,25 @@
-const inputField = {
+const InputField = {
     name: 'input-field',
-    data: {
-        props: {
-            type: String,
-            placeholderValue: String,
-        },
-        template: `
-            <div>
-            <input :type="type" v-model="value" :placeholder="placeholderValue">
-            <button v-on:click="myFunction">Clicky</button>
-            </div>
-        `,
-        methods: {
-            myFunction() {
-                console.log(this.value)
+    template: `
+        <div>
+            <input 
+                :type="type"
+                :placeholder="placeholder"
+                v-model="inputValue"
+            />
+        </div>
+    `,
+    props: ['modelValue', 'placeholder', 'type'],
+    computed: {
+        inputValue: {
+            get() {
+                return this.modelValue
+            },
+            set(value) {
+                this.$emit('update:modelValue', value)
             }
         }
     }
-
 }
 
-export default inputField
+export default InputField

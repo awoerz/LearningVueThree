@@ -1,9 +1,7 @@
-const listItem = {
+const ListItem = {
     name: "list-item",
-    data: {
-        props: ['item'],
-        template: `<li>{{item.text}}</li>`
-    }
+    template: `<li>{{item.text}}</li>`,
+    props: ['item']
 }
 
-export default listItem
+export default ListItem

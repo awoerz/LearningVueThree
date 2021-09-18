@@ -1,26 +1,20 @@
-import listItem from './Components/listItem.js'
-import inputField from './Components/InputField.js'
+import ListItem from './Components/ListItem.js'
+import InputField from './Components/InputField.js'
+import SimpleForm from './Components/SimpleForm.js'
 
 const list = Vue.createApp({
-    data() {
-        return {
-            currentId: 2,
-            items: [
-                { id: 0, text: 'Item One'},
-                { id: 1, text: 'Item Two'},
-                { id: 2, text: 'Item Three'}
-            ],
-            input: "test"
-        }
-    },
+
+    components: ['simple-form'],
     methods: {
-        addToList() {
-            console.log(this.input)
+        myFunction() {
+            console.log("click")
         }
     }
 })
 
-list.component(listItem.name, listItem.data)
-list.component(inputField.name, inputField.data)
+list.component(InputField.name, InputField)
+list.component(ListItem.name, ListItem)
+list.component(SimpleForm.name, SimpleForm)
+
 
 list.mount('#items-list')
